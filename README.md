@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# 🎬 API Filmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para busca e visualização de filmes, desenvolvida com foco em aprendizado de requisições HTTP, tipagem de dados, roteamento frontend e componentização com React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 Sobre o Projeto
 
-## React Compiler
+A aplicação lista os **10 primeiros filmes em ordem alfabética** e permite ao usuário clicar em qualquer filme para visualizar um banner com informações detalhadas, como:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎥 Diretor
+- 📅 Ano de lançamento
+- 📝 Descrição do filme
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologias Utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://react.dev/) — Biblioteca para construção de interfaces
+- [Vite](https://vitejs.dev/) — Ferramenta de build e desenvolvimento
+- [TypeScript](https://www.typescriptlang.org/) — Tipagem estática para JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) — Estilização com classes utilitárias
+- API externa de filmes
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🎯 Conceitos Praticados
+
+- Requisições HTTP com `fetch`
+- Tipagem de dados com TypeScript
+- Rotas no frontend
+- Componentização com React
+
+---
+
+## ⚙️ Como Rodar Localmente
+
+**Pré-requisitos:** Node.js instalado
+
+```bash
+# Clone o repositório
+git clone https://github.com/thalitasilva620/api-filmes.git
+
+# Acesse a pasta do projeto
+cd api-filmes
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Acesse [http://localhost:5173](http://localhost:5173) no navegador.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👩‍💻 Autora
+
+Feito por **Thalita Silva** — [GitHub](https://github.com/thalitasilva620)
