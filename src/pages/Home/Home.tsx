@@ -3,7 +3,7 @@ import { useFilm } from '../../hooks/useFilm';
 import type { Film } from '../../type/Film';
 
 export default function Home() {
-    const { film, loading, error } = useFilm();
+    const { films, loading, error } = useFilm();
 
     if (loading) {
         return (
@@ -42,8 +42,8 @@ export default function Home() {
             </header>
 
             <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {film.map((film: Film) => (
-                    <FilmCard key={film.id} film={film} />
+                {films.map((currentFilm: Film) => (
+                    <FilmCard key={currentFilm.id} film={currentFilm} />
                 ))}
             </section>
         </main>
